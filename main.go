@@ -19,9 +19,10 @@ func main() {
    })
 
 
-   var port string
-   port = os.Getenv("PORT")
+   
+   port := os.Getenv("PORT")
+     
 
-   app.Listen(port)
+   app.Listen(`0.0.0.0:` + port)
     
 }
